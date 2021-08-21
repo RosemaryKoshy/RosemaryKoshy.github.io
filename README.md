@@ -1,5 +1,3 @@
 # RosemaryPierson.github.io
 
-Folk Dancing
-
-moved to folkdancing.github.io
+Rosemary Pierson <rosemary.pierson@reed.edu>
