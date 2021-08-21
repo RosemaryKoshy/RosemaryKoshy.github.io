@@ -41,26 +41,24 @@
         context = canvas.getContext('2d')
         context.globalAlpha = 1 / 2
 
-        function on_mouse_down(event) {
+        function pointer_down(event) {
             mouse_down = true
             paint(event.offsetX, event.offsetY)
         }
 
-        function on_mouse_move(event) {
+        function pointer_move(event) {
             if (mouse_down) paint(event.offsetX, event.offsetY)
         }
 
-        function on_mouse_up(event) {
+        function pointer_up(event) {
             mouse_down = false
             paint(event.offsetX, event.offsetY)
         }
 
-        canvas.addEventListener('mousedown', on_mouse_down)
-        canvas.addEventListener('touchstart', on_mouse_down)
-        canvas.addEventListener('mousemove', on_mouse_move)
-        canvas.addEventListener('touchmove', on_mouse_move)
-        canvas.addEventListener('mouseup', on_mouse_up)
-        canvas.addEventListener('touchend', on_mouse_up)
+        canvas.onpointerdown = pointer_down
+        canvas.onpointermove = pointer_move
+        canvas.onpointerup = pointer_up
+        canvas.onpointercancel = pointer_up
 
         const color_selector = document.querySelector('#color_input')
         color_selector.addEventListener('input', function (event) {
