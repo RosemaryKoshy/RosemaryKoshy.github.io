@@ -1,3 +1,3 @@
-# RosemaryPierson.github.io
+# RosemaryKoshy.github.io
 
-Rosemary Pierson <rosemary.pierson@reed.edu>
+Rosemary Koshy <rosemary.koshy@reed.edu>
